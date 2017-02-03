@@ -673,6 +673,7 @@ figure{
     height: auto;
     background-color: #00599c;
     transition: background-color 150ms linear;
+
 }
 
 .publication:hover a{
