@@ -122,12 +122,11 @@ var lgMdSmClearfix = [5, 11];
 
 
 /**
- * This function adds all publications to the html document. The publications are stored in the JSON Object "publications"
- * For every Object in "publications" it will add a div container with the given information.
- * If a clearfix is needed (info for that must be gathered manually, see the 3 variables above) it will add the correct one.
+ * This function calls the buildSite function as often as there are objects in the JSON object "publications"
  *
- * The search is also handled here. If something is entered into the input field "#searchBox" it will hide all publication div
- * containers and show only the ones, that contain the given string in their title, paperName or author
+ * The search is also handled here. If something is entered into the input field "#searchBox" it will delete all
+ * publication div containers and call the "buildSite" function, which then adds the objects, that contain the
+ * given string in their title, paperName or author -not case sensitive-
  */
 $(document).ready(function(){
 
@@ -139,9 +138,9 @@ $(document).ready(function(){
         $('.pub').remove();
         $('.clearfix').remove();
         var count = 0;
-        var input = $('#searchBox').val();
+        var input = $('#searchBox').val().toLowerCase();
         for(var j = 0; j < publications.length; j++){
-            if(publications[j].paperName.indexOf(input) >= 0 || publications[j].title.indexOf(input) >= 0 || publications[j].author.indexOf(input) >= 0){
+            if(publications[j].paperName.toLowerCase().indexOf(input) != -1 || publications[j].title.toLowerCase().indexOf(input) != -1 || publications[j].author.toLowerCase().indexOf(input) != -1){
                 buildSite(j, count);
                 count++;
             }
@@ -149,11 +148,21 @@ $(document).ready(function(){
     });
 });
 
+/**
+ * This function adds all publications to the html document. The publications are stored in the JSON Object "publications".
+ * For every Object in "publications" it will add a div container with the given information.
+ * If a clearfix is needed (info for that must be gathered manually, see the 3 variables above) it will add the correct one.
+ *
+ * @param index   = provides info about which is the current publication
+ * @param counter = if the search is triggered, the clearfixes don't match to the indexes of the publications anymore
+ *                  the counter variable provides the correct place for the clearfix (set to -1 if not needed)
+ */
 function buildSite(index, counter){
     if(counter === -1){
         counter = index;
     }
-    $("#appendix").append('<div id="'+publications[index].id+'" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-centered pub">' +
+    var appendix = $('#appendix');
+    appendix.append('<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-centered pub">' +
         '               <div class="publication">' +
         '                   <a class="textColorTrans" href='+publications[index].link+'>' +
         '                       <p class="paperName2">'+publications[index].paperName+'</p>' +
@@ -165,10 +174,10 @@ function buildSite(index, counter){
         '               </div>' +
         '           </div>');
     if($.inArray(counter, mdSmClearfix) !== -1){
-        $("#appendix").append('<div class="clearfix visible-md visible-sm"></div>')
+        appendix.append('<div class="clearfix visible-md visible-sm"></div>')
     }else if($.inArray(counter, lgClearfix) !== -1){
-        $("#appendix").append('<div class="clearfix visible-lg"></div>')
+        appendix.append('<div class="clearfix visible-lg"></div>')
     }else if($.inArray(counter, lgMdSmClearfix) !== -1){
-        $("#appendix").append('<div class="clearfix visible-lg visible-md visible-sm"></div>')
+        appendix.append('<div class="clearfix visible-lg visible-md visible-sm"></div>')
     }
 }
