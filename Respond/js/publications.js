@@ -132,6 +132,5 @@ $(document).ready(function(){
                 $('#' + publications[j].id).show();
             }
         }
-
     });
 });
