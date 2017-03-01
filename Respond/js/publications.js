@@ -132,22 +132,27 @@ var lgMdSmClearfix = [5, 11];
 $(document).ready(function(){
 
     for(var i = 0; i < publications.length; i++){
-        buildSite(i);
+        buildSite(i, -1);
     }
 
     $('#searchBox').on('input', function(){
         $('.pub').remove();
         $('.clearfix').remove();
+        var count = 0;
         var input = $('#searchBox').val();
         for(var j = 0; j < publications.length; j++){
             if(publications[j].paperName.indexOf(input) >= 0 || publications[j].title.indexOf(input) >= 0 || publications[j].author.indexOf(input) >= 0){
-                buildSite(j);
+                buildSite(j, count);
+                count++;
             }
         }
     });
 });
 
-function buildSite(index){
+function buildSite(index, counter){
+    if(counter === -1){
+        counter = index;
+    }
     $("#appendix").append('<div id="'+publications[index].id+'" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-centered pub">' +
         '               <div class="publication">' +
         '                   <a class="textColorTrans" href='+publications[index].link+'>' +
@@ -159,11 +164,11 @@ function buildSite(index){
         '                   </a>' +
         '               </div>' +
         '           </div>');
-    if($.inArray(index, mdSmClearfix) !== -1){
+    if($.inArray(counter, mdSmClearfix) !== -1){
         $("#appendix").append('<div class="clearfix visible-md visible-sm"></div>')
-    }else if($.inArray(index, lgClearfix) !== -1){
+    }else if($.inArray(counter, lgClearfix) !== -1){
         $("#appendix").append('<div class="clearfix visible-lg"></div>')
-    }else if($.inArray(index, lgMdSmClearfix) !== -1){
+    }else if($.inArray(counter, lgMdSmClearfix) !== -1){
         $("#appendix").append('<div class="clearfix visible-lg visible-md visible-sm"></div>')
     }
 }
