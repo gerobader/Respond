@@ -1,3 +1,7 @@
+/**
+ * All info for the publications are stored in this JSON Object
+ * @type {*[]}
+ */
 publications = [
     {
         "id" : 0,
@@ -107,30 +111,59 @@ publications = [
 ];
 
 
+/**
+ * info which publication container needs what kind of clearfix behind it
+ * Note: numbers given here are publication id - 1
+ * @type {number[]}
+ */
+var mdSmClearfix = [1, 3, 7, 9, 13];
+var lgClearfix = [2, 8];
+var lgMdSmClearfix = [5, 11];
 
+
+/**
+ * This function adds all publications to the html document. The publications are stored in the JSON Object "publications"
+ * For every Object in "publications" it will add a div container with the given information.
+ * If a clearfix is needed (info for that must be gathered manually, see the 3 variables above) it will add the correct one.
+ *
+ * The search is also handled here. If something is entered into the input field "#searchBox" it will hide all publication div
+ * containers and show only the ones, that contain the given string in their title, paperName or author
+ */
 $(document).ready(function(){
 
     for(var i = 0; i < publications.length; i++){
-        $("#appendix").append('<div id="'+publications[i].id+'" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-centered pub">' +
-            '               <div class="publication">' +
-            '                   <a class="textColorTrans" href='+publications[i].link+'>' +
-            '                       <p class="paperName2">'+publications[i].paperName+'</p>' +
-            '                       <hr class="publicationLine">' +
-            '                       <p class="publicationTitle">'+publications[i].title+'</p>' +
-            '                       <hr class="publicationLine">' +
-            '                       <p class="publicationHead">'+publications[i].author+'</p>' +
-            '                   </a>' +
-            '               </div>' +
-            '           </div>');
+        buildSite(i);
     }
 
     $('#searchBox').on('input', function(){
-        $('.pub').hide();
+        $('.pub').remove();
+        $('.clearfix').remove();
         var input = $('#searchBox').val();
         for(var j = 0; j < publications.length; j++){
             if(publications[j].paperName.indexOf(input) >= 0 || publications[j].title.indexOf(input) >= 0 || publications[j].author.indexOf(input) >= 0){
-                $('#' + publications[j].id).show();
+                buildSite(j);
             }
         }
     });
 });
+
+function buildSite(index){
+    $("#appendix").append('<div id="'+publications[index].id+'" class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-centered pub">' +
+        '               <div class="publication">' +
+        '                   <a class="textColorTrans" href='+publications[index].link+'>' +
+        '                       <p class="paperName2">'+publications[index].paperName+'</p>' +
+        '                       <hr class="publicationLine">' +
+        '                       <p class="publicationTitle">'+publications[index].title+'</p>' +
+        '                       <hr class="publicationLine">' +
+        '                       <p class="publicationHead">'+publications[index].author+'</p>' +
+        '                   </a>' +
+        '               </div>' +
+        '           </div>');
+    if($.inArray(index, mdSmClearfix) !== -1){
+        $("#appendix").append('<div class="clearfix visible-md visible-sm"></div>')
+    }else if($.inArray(index, lgClearfix) !== -1){
+        $("#appendix").append('<div class="clearfix visible-lg"></div>')
+    }else if($.inArray(index, lgMdSmClearfix) !== -1){
+        $("#appendix").append('<div class="clearfix visible-lg visible-md visible-sm"></div>')
+    }
+}
