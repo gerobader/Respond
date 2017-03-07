@@ -113,7 +113,7 @@ publications = [
 
 /**
  * info which publication container needs what kind of clearfix behind it
- * Note: numbers given here are publication id - 1
+ * Note: numbers given here are publication id + 1
  * @type {number[]}
  */
 var mdSmClearfix = [1, 3, 7, 9, 13];
@@ -122,7 +122,7 @@ var lgMdSmClearfix = [5, 11];
 
 
 /**
- * This function calls the buildSite function as often as there are objects in the JSON object "publications"
+ * This function calls the buildSite function for every object in the JSON object "publications"
  *
  * The search is also handled here. If something is entered into the input field "#searchBox" it will delete all
  * publication div containers and call the "buildSite" function, which then adds the objects, that contain the
@@ -151,7 +151,7 @@ $(document).ready(function(){
 /**
  * This function adds all publications to the html document. The publications are stored in the JSON Object "publications".
  * For every Object in "publications" it will add a div container with the given information.
- * If a clearfix is needed (info for that must be gathered manually, see the 3 variables above) it will add the correct one.
+ * If a clearfix is needed (info for that must be gathered manually, see mdSmClearfix, lgClearfix, lgMdSmClearfix) it will add the correct one.
  *
  * @param index   = provides info about which is the current publication
  * @param counter = if the search is triggered, the clearfixes don't match to the indexes of the publications anymore
