@@ -10,10 +10,10 @@ function colHeight() {
 
 function initialize(){
 
-    $logo1 = $(".qLUpLeft");
-    $logo2 = $(".qLUpRight");
-    $logo3 = $(".qLLowLeft");
-    $logo4 = $(".qLLowRight");
+    var $logo1 = $(".qLUpLeft");
+    var $logo2 = $(".qLUpRight");
+    var $logo3 = $(".qLLowLeft");
+    var $logo4 = $(".qLLowRight");
 
 
     $logo1.hover(function () {
