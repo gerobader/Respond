@@ -120,11 +120,11 @@ publications = [
 
 /**
  * info which publication container needs what kind of clearfix behind it
- * Note: numbers given here are publication id + 1
+ * Note: numbers given here are publication id
  * @type {number[]}
  */
 var mdSmClearfix = [1, 3, 7, 9, 13];
-var lgClearfix = [2, 8];
+var lgClearfix = [2, 8, 14];
 var lgMdSmClearfix = [5, 11];
 
 
