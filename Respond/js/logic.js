@@ -120,7 +120,7 @@ publications = [
     {
         "id" : 14,
         "link" : "https://www.ncbi.nlm.nih.gov/pubmed/28197551",
-        "paperName" : "eNeuro. 2017 Feb 6;4(1)",
+        "paperName" : "eNeuro. 2017 Feb 6; 4(1)",
         "title" : "EphrinA5 Signaling Is Required for the Distinctive Targeting of Raphe Serotonin Neurons in the Forebrain.",
         "author" : "Teng T, Gaillard A, Muzerelle A, Gaspar P",
         "mainpage" : true
