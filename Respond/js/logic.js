@@ -148,6 +148,22 @@ publications = [
         "title" : "Specific Connectivity and Unique Molecular Identity of MET Receptor Tyrosine Kinase-Expressing Serotonergic Neurons in the Caudal Dorsal Raphe Nuclei.",
         "author" : "Kast RJ, Wu HH, Williams P, Gaspar P, Levitt P",
         "mainpage" : false
+    },
+    {
+        "id" : 18,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/29018333",
+        "paperName" : "Front Cell Neurosci. 2017 Sep 26",
+        "title" : "Cadherin-13 Deficiency Increases Dorsal Raphe 5-HT Neuron Density and Prefrontal Cortex Innervation in the Mouse Brain.",
+        "author" : "Forero A, Rivero O, Wäldchen S, Ku HP, Kiser DP, Gärtner Y, Pennington LS, Waider J, Gaspar P, Jansch C, Edenhofer F, Resink TJ, Blum R, Sauer M, Lesch KP",
+        "mainpage" : false
+    },
+    {
+        "id" : 19,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/26744978",
+        "paperName" : "Nat Biotechnol. 2016 Jan",
+        "title" : "Serotonin neurons in a dish.",
+        "author" : "Gaspar P, Nedelec S",
+        "mainpage" : false
     }
 ];
 
@@ -158,7 +174,7 @@ publications = [
  */
 var mdSmClearfix = [1, 3, 7, 9, 13];
 var lgClearfix = [2, 8, 14];
-var lgMdSmClearfix = [5, 11];
+var lgMdSmClearfix = [5, 11, 17];
 
 
 function colHeight() {
