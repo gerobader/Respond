@@ -123,7 +123,7 @@ publications = [
         "paperName" : "eNeuro. 2017 Feb 6; 4(1)",
         "title" : "EphrinA5 Signaling Is Required for the Distinctive Targeting of Raphe Serotonin Neurons in the Forebrain.",
         "author" : "Teng T, Gaillard A, Muzerelle A, Gaspar P",
-        "mainpage" : true
+        "mainpage" : false
     },
     {
         "id" : 15,
@@ -131,7 +131,7 @@ publications = [
         "paperName" : "ACS Chem Neurosci. 2017 Feb 9",
         "title" : "Comeback of the Rat in Biomedical Research.",
         "author" : "Homberg JR, Wöhr M, Alenina N",
-        "mainpage" : true
+        "mainpage" : false
     },
     {
         "id" : 16,
@@ -164,6 +164,22 @@ publications = [
         "title" : "Serotonin neurons in a dish.",
         "author" : "Gaspar P, Nedelec S",
         "mainpage" : false
+    },
+    {
+        "id" : 20,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/29477591",
+        "paperName" : "Stem Cell Res. 2018 Apr",
+        "title" : "Generation of a human induced pluripotent stem cell (iPSC) line from a 51-year-old female with attention-deficit/hyperactivity disorder (ADHD) carrying a duplication of SLC2A3.",
+        "author" : "Jansch C, Günther K, Waider J, Ziegler GC, Forero A, Kollert S, Svirin E, Pühringer D, Kwok CK, Ullmann R, Maierhofer A, Flunkert J, Haaf T, Edenhofer F, Lesch KP",
+        "mainpage" : true
+    },
+    {
+        "id" : 21,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/29233642",
+        "paperName" : "Behav Brain Res. 2018 Jul 2",
+        "title" : "Acute inescapable stress alleviates fear extinction recall deficits caused by serotonin transporter abolishment.",
+        "author" : "Schipper P1, Henckens MJAG1, Lopresto D1, Kozicz T2, Homberg JR",
+        "mainpage" : true
     }
 ];
 
@@ -172,8 +188,8 @@ publications = [
  * Note: numbers given here are publication id
  * @type {number[]}
  */
-var mdSmClearfix = [1, 3, 7, 9, 13];
-var lgClearfix = [2, 8, 14];
+var mdSmClearfix = [1, 3, 7, 9, 13, 19];
+var lgClearfix = [2, 8, 14, 20];
 var lgMdSmClearfix = [5, 11, 17];
 
 
