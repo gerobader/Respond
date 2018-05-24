@@ -449,6 +449,7 @@ figure{
 .overviewHeader{
     margin-bottom: 5px;
     font-size: 32px;
+    color: #00599c;
 }
 
 .overviewLine{
@@ -650,6 +651,7 @@ figure{
     font-size: 30px;
     margin-bottom: 20px;
     font-weight: 400;
+    color: #00599c;
 }
 
 #searchBox{
@@ -734,7 +736,9 @@ figure{
     text-align: center;
     height: auto;
     padding: 10px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
     width: 65%;
 }
 
@@ -776,6 +780,43 @@ figure{
     font-size: 34px;
     font-weight: 300;
     color: #404041;
+}
+
+/*-------------------------------------------------Impressum.html------------------------------------------------*/
+
+.footerContent {
+    text-align: center;
+    height: auto;
+    padding: 10px 9% 15px;
+    width: 55%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.impressumText {
+    text-align: left;
+}
+
+.impressumText h4 {
+    line-height: 28px;
+}
+
+.impressumText h3 {
+    color: #00599c;
+}
+
+.impressumText p {
+    line-height: 28px;
+}
+
+.impressumText p span {
+    font-weight: 700;
+}
+
+.glyphicon-envelope {
+    font-size: 12px;
+    margin-right: 3px;
 }
 
 @media (max-width: 1244px){
