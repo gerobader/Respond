@@ -817,6 +817,7 @@ figure{
 .glyphicon-envelope {
     font-size: 12px;
     margin-right: 3px;
+    color: #00599c;
 }
 
 @media (max-width: 1244px){
@@ -869,6 +870,10 @@ figure{
     }
     .projectOverview{
         width: 90%;
+    }
+
+    .impressumContent {
+        width: 80%;
     }
 }
 
@@ -934,6 +939,9 @@ figure{
     .quatroLogo{
         height: 100px;
         margin: 0 70px;
+    }
+    .impressumContent {
+        width: 90%;
     }
 }
 
