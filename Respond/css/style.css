@@ -49,6 +49,89 @@ body {
     color: white;
 }
 
+.respond-nav{
+    background: #00599c;
+    border-radius: 4px;
+    border: 1px solid #080808;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+.respond-nav .pull-left{
+    float: left;
+}
+
+.respond-nav .desktop-nav{
+    float: left;
+    margin: 30px;
+    padding-left: 0;
+}
+
+.respond-nav .desktop-nav > li, .respond-nav .mobile-nav > li{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.respond-nav .desktop-nav > li > a, .respond-nav .mobile-nav > li > a{
+    color: #9d9d9d;
+    padding: 15px;
+    line-height: 20px;
+    display: block;
+}
+
+.respond-nav .desktop-nav > li.active > a, .respond-nav .mobile-nav > li.active > a{
+    color: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+.respond-nav .desktop-nav > li > a:hover, .respond-nav .mobile-nav > li > a:hover{
+    color: #fff;
+    text-decoration: none;
+}
+
+.respond-nav .navbar-toggle{
+    position: absolute;
+    padding: 9px;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: transparent;
+    top: 8px;
+    right: 15px;
+}
+
+.respond-nav .navbar-toggle:focus{
+    outline: none;
+}
+
+.respond-nav .navbar-toggle .icon-bar{
+    background-color: #fff;
+    display: block;
+    width: 22px;
+    height: 2px;
+    border-radius: 1px;
+}
+
+.respond-nav .navbar-toggle .icon-bar:nth-child(n+2){
+    margin-top: 4px;
+}
+
+.respond-nav .neuron-logo{
+    float: right;
+}
+
+.respond-nav .neuron-logo .pull-right{
+    float:right;
+    color: #fff;
+}
+
+.respond-nav .mobile-nav{
+    border-top: 1px solid #080808;
+    margin: 0;
+    padding: 30px 0 30px 45px;
+    display: none;
+}
+
 .navbar{
     background-color: #00599c;
     color: white;
@@ -58,7 +141,6 @@ body {
     font-weight: 300;
     text-align: center;
     font-size: 28pt;
-    color: #bbbdc0;
     margin: 0 10px 0 0;
 }
 
@@ -518,6 +600,16 @@ figure{
     height: auto;
 }
 
+.image-col{
+    width: 40%;
+    float: left;
+}
+
+.info-col{
+    width: 60%;
+    float: left;
+}
+
 .coming-events{
     margin-bottom: 50px;
 }
@@ -542,13 +634,14 @@ figure{
 }
 
 .eventImg{
-    margin: 10px 10px 10px 0;
-    width: 40%;
-    min-width: 220px;
-    float: left;
+    width: 100%;
     max-width: 250px;
     border-radius: 8px;
     cursor: pointer;
+}
+
+.eventImg.goettingen{
+    margin-top: 50px;
 }
 
 .eventDate{
@@ -847,7 +940,7 @@ figure{
 }
 
 @media (max-width: 1244px){
-    .navbar-right{
+    .navbar-right, .respond-nav .neuron-logo{
         display: none;
     }
 
@@ -862,6 +955,33 @@ figure{
 
     .quatroLogo{
         height: 70px;
+    }
+}
+
+@media (max-width: 1199px){
+    .eventImg{
+        margin: 15px 0;
+    }
+    .eventImg.goettingen{
+        margin-top:15px;
+    }
+}
+@media (min-width: 1028px){
+    .navbar-toggle{
+        display: none;
+    }
+}
+@media (max-width: 1027px){
+    .respond-nav .desktop-nav{
+        display: none;
+    }
+
+    .respond-nav .mobile-nav{
+        display: block;
+    }
+
+    .respond-nav .pull-left{
+        margin-left: -15px;
     }
 }
 
@@ -906,6 +1026,21 @@ figure{
 @media (max-width: 874px){
     .lightText{
         margin-top: 10px;
+        height: 50px;
+    }
+
+    .respond-nav .mobile-nav{
+        margin: 0 0 8px;
+        padding: 8px 0 0;
+    }
+
+    .respond-nav .mobile-nav > li{
+        display: block;
+    }
+
+    .respond-nav .mobile-nav > li.active > a, .navbar-inverse .navbar-nav > .active > a{
+        border-bottom: none;
+        text-decoration: underline;
     }
 
     .col1, .col2{
@@ -931,11 +1066,30 @@ figure{
 @media(max-width: 760px){
     figure{
         width: 100%;
+        min-width: unset;
     }
+
+    .overviewText{
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .overview-box{
+        padding: 15px;
+    }
+
     #searchBox{
         float: none;
         margin-right: 0;
         margin-bottom: 15px;
+    }
+    .event{
+        margin:0;
+    }
+
+    .publication{
+        height: unset;
+        max-height: unset;
     }
 }
 

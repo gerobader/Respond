@@ -3,11 +3,12 @@
 <head>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Events</title>
     <meta charset="UTF-8">
     <link rel="icon" href="images/Respond_Logo_(Blue).png">
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,300i,400,500" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://code.jquery.com/jquery-latest.js"></script>
     <script language="javascript" type="text/javascript" src="js/picResize.js"></script>
@@ -15,87 +16,110 @@
 <body onload="initialize()">
 <div id="wrapper">
     <div id="header">
-        <nav class="navbar navbar-inverse">
+        <nav class="respond-nav">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a class="pull-left" href="index.html"><img id="respondLogo" src="images/Respond_Logo_(Blue).png"></a>
+                <a class="pull-left" href="index.html"><img id="respondLogo" src="images/Respond_Logo_(Blue).png"></a>
+                <ul class="desktop-nav">
+                    <li class="lightText"><a class="textColorTrans" href="index.html">Start</a></li>
+                    <li class="lightText"><a class="textColorTrans" href="overview.html">Overview</a></li>
+                    <li class="lightText"><a class="textColorTrans" href="publications.html">Publications</a></li>
+                    <li class="active lightText"><a class="textColorTrans" href="events.html">Events</a></li>
+                </ul>
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <div class="neuron-logo">
+                    <a class="pull-right" href="http://www.neuron-eranet.eu/"><img id="neuronLogo" src="images/Fund-Partner.gif"></a>
+                    <p class="pull-right navRight">funded by:</p>
                 </div>
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav">
-                        <li class="lightText"><a class="textColorTrans" href="index.html">Start</a></li>
-                        <li class="lightText"><a class="textColorTrans" href="overview.html">Overview</a></li>
-                        <li class="lightText"><a class="textColorTrans" href="publications.html">Publications</a></li>
-                        <li class="active lightText"><a class="textColorTrans" href="events.html">Events</a></li>
-                    </ul>
-                    <div class="nav navbar-right">
-                        <a class="pull-right" href="http://www.neuron-eranet.eu/"><img id="neuronLogo" src="images/Fund-Partner.gif"></a>
-                        <p class="pull-right navRight">funded by:</p>
-                    </div>
-                </div>
+                <div class="clear"></div>
             </div>
+            <ul class="mobile-nav" style="display: none;">
+                <li class="lightText"><a class="textColorTrans" href="index.html">Start</a></li>
+                <li class="lightText"><a class="textColorTrans" href="overview.html">Overview</a></li>
+                <li class="lightText"><a class="textColorTrans" href="publications.html">Publications</a></li>
+                <li class="active lightText"><a class="textColorTrans" href="events.html">Events</a></li>
+            </ul>
         </nav>
     </div>
     <div id="content">
         <div class="container-fluid">
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 col-centered coming-events">
-                <div class="col6 boxshadow">
-                    <h4 class="headerBig">Coming</h4>
-                    <a class="event-link" target="_blank" href="https://www.nwg-goettingen.de/">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 col-centered coming-events">
+                    <div class="col6 boxshadow">
+                        <h4 class="headerBig">Coming</h4>
+                        <p class="eventDescription">There are no upcoming events at the moment.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 col-centered">
+                    <div class="col6 boxshadow">
+                        <h4 class="headerBig">Past</h4>
                         <div class="event">
-                            <p class="eventDate">20.3. - 23.3.2019</p>
-                            <p class="eventName">Serotonin and its developmental role in shaping brain plasticity and neuropsychological phenotypes.</p>
-                            <p class="event-extra">Proceedings of the ERA-NET NEURON consortium RESPOND</p>
+                            <div class="row">
+                                <div class="col-xl-5 col-lg-12">
+                                    <img alt="Göttingen-Meeting" class="boxShadowTrans eventImg goettingen" src="images/respondnwg.jpg"/>
+                                </div>
+                                <div class="col-xl-7 col-lg-12">
+                                    <p class="eventDate">20.3. - 23.3.2019</p>
+                                    <p class="eventName">Serotonin and its developmental role in shaping brain plasticity and neuropsychological phenotypes.</p>
+                                    <p class="event-extra">Proceedings of the ERA-NET NEURON consortium RESPOND</p>
+                                    <hr class="eventLine2">
+                                    <p class="eventDescription">Symposium 5, 13th Göttingen Meeting of the German Neuroscience Society</p>
+                                    <p class="event-location">Göttingen, Germany</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="eventLine">
+                        <div class="event">
+                            <div class="row">
+                                <div class="col-xl-5 col-lg-12">
+                                    <img alt="Final-Meeting" class="boxShadowTrans eventImg" src="images/paris_meeting.jpg"/>
+                                </div>
+                                <div class="col-xl-7 col-lg-12">
+                                    <p class="eventDate">7.9. - 8.9.2018</p>
+                                    <p class="eventName">Final Meeting</p>
+                                    <hr class="eventLine2">
+                                    <p class="eventDescription">Paris, France</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <hr class="eventLine">
+                        <div class="event">
+                            <p class="eventDate">18.9. - 19.9.2017</p>
+                            <p class="eventName">ERA-NET NEURON Meeting</p>
                             <hr class="eventLine2">
-                            <p class="eventDescription">Symposium 5, 13th Göttingen Meeting of the German Neuroscience Society</p>
-                            <p class="event-location">Göttingen, Germany</p>
+                            <p class="eventDescription">Riga, Latvia</p>
                             <div class="clear"></div>
                         </div>
-                    </a>
-                    <!--<p class="eventDescription">There are no upcoming events at the moment.</p>-->
-                </div>
-            </div>
-            <div class="col-lg-6 col-md-12 col-sm-12 col-12 col-centered">
-                <div class="col6 boxshadow">
-                    <h4 class="headerBig">Past</h4>
-                    <div class="event">
-                        <img alt="Final-Meeting" class="boxShadowTrans eventImg" src="images/paris_meeting.jpg"/>
-                        <p class="eventDate">7.9. - 8.9.2018</p>
-                        <p class="eventName">Final Meeting</p>
-                        <hr class="eventLine2">
-                        <p class="eventDescription">Paris, France</p>
-                        <div class="clear"></div>
-                    </div>
-                    <hr class="eventLine">
-                    <div class="event">
-                        <p class="eventDate">18.9. - 19.9.2017</p>
-                        <p class="eventName">ERA-NET NEURON Meeting</p>
-                        <hr class="eventLine2">
-                        <p class="eventDescription">Riga, Latvia</p>
-                        <div class="clear"></div>
-                    </div>
-                    <hr class="eventLine">
-                    <div class="event">
-                        <p class="eventDate">16.9. - 17.9.2017</p>
-                        <p class="eventName">Midterm Meeting</p>
-                        <hr class="eventLine2">
-                        <p class="eventDescription">Max-Delbrück-Center for Molecular Medicine</p>
-                        <p class="event-location">Berlin, Germany</p>
-                        <div class="clear"></div>
-                    </div>
-                    <hr class="eventLine">
-                    <div class="event">
-                        <img alt="Kickoff-Meeting" class="boxShadowTrans eventImg" src="images/kickoff-Meeting.jpg"/>
-                        <p class="eventDate">2.6. - 4.6.2016</p>
-                        <p class="eventName">Kickoff-Meeting</p>
-                        <hr class="eventLine2">
-                        <p class="eventDescription">Max-Delbrück-Center for Molecular Medicine</p>
-                        <p class="event-location">Berlin, Germany</p>
-                        <div class="clear"></div>
+                        <hr class="eventLine">
+                        <div class="event">
+                            <p class="eventDate">16.9. - 17.9.2017</p>
+                            <p class="eventName">Midterm Meeting</p>
+                            <hr class="eventLine2">
+                            <p class="eventDescription">Max-Delbrück-Center for Molecular Medicine</p>
+                            <p class="event-location">Berlin, Germany</p>
+                            <div class="clear"></div>
+                        </div>
+                        <hr class="eventLine">
+                        <div class="event">
+                            <div class="row">
+                                <div class="col-xl-5 col-lg-12">
+                                    <img alt="Kickoff-Meeting" class="boxShadowTrans eventImg" src="images/kickoff-Meeting.jpg"/>
+                                </div>
+                                <div class="col-xl-7 col-lg-12">
+                                    <p class="eventDate">2.6. - 4.6.2016</p>
+                                    <p class="eventName">Kickoff-Meeting</p>
+                                    <hr class="eventLine2">
+                                    <p class="eventDescription">Max-Delbrück-Center for Molecular Medicine</p>
+                                    <p class="event-location">Berlin, Germany</p>
+                                    <div class="clear"></div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -115,5 +139,18 @@
     </div>
 </div>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $(function () {
+        $(".navbar-toggle").click(function () {
+            $(".mobile-nav").slideToggle(300, "swing");
+        });
+
+        $(window).resize(function () {
+            if($(this).width() > 1027){
+                $(".mobile-nav").hide();
+            }
+        })
+    });
+</script>
 </body>
 </html>

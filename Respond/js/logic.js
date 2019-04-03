@@ -1,5 +1,9 @@
 window.addEventListener("resize", colHeight);
 
+$('#searchBox').on('input', function(){
+    searchPublications($(this).val().toLowerCase());
+});
+
 /**
  * All info for the publications are stored in this JSON Object
  * @type {*[]}
@@ -300,29 +304,31 @@ function initialize(){
 }
 
 /**
- * This function calls the buildSite function for every object in the JSON object "publications"
- *
- * The search is also handled here. If something is entered into the input field "#searchBox" it will delete all
- * publication div containers and call the "buildSite" function, which then adds the objects, that contain the
- * given string in their title, paperName or author -not case sensitive-
+ * This function calls the buildSite function for every object in the JSON object publications
  */
 function pubBuild(){
-    for(var i = 0; i < publications.length; i++){
+    for(let i = 0; i < publications.length; i++){
         buildSite(i, -1);
     }
+}
 
-    $('#searchBox').on('input', function(){
-        $('.pub').remove();
-        $('.clearfix').remove();
-        var count = 0;
-        var input = $('#searchBox').val().toLowerCase();
-        for(var j = 0; j < publications.length; j++){
-            if(publications[j].paperName.toLowerCase().indexOf(input) != -1 || publications[j].title.toLowerCase().indexOf(input) != -1 || publications[j].author.toLowerCase().indexOf(input) != -1){
-                buildSite(j, count);
-                count++;
-            }
+/**
+ * The search is handled here. If something is entered into the input field "#searchBox" it will delete all
+ * publication div containers and call the "buildSite" function, which then adds the objects, that contain the
+ * given string in their title, paperName or author -not case sensitive-
+ *
+ * @param input - the user input
+ */
+function searchPublications(input){
+    $('.pub').remove();
+    $('.clearfix').remove();
+    let count = 0;
+    for(let j = 0; j < publications.length; j++){
+        if(publications[j].paperName.toLowerCase().indexOf(input) !== -1 || publications[j].title.toLowerCase().indexOf(input) !== -1 || publications[j].author.toLowerCase().indexOf(input) !== -1){
+            buildSite(j, count);
+            count++;
         }
-    });
+    }
 }
 
 /**
