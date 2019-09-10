@@ -175,14 +175,86 @@ publications = [
         "paperName" : "Stem Cell Res. 2018 Apr",
         "title" : "Generation of a human induced pluripotent stem cell (iPSC) line from a 51-year-old female with attention-deficit/hyperactivity disorder (ADHD) carrying a duplication of SLC2A3.",
         "author" : "Jansch C, Günther K, Waider J, Ziegler GC, Forero A, Kollert S, Svirin E, Pühringer D, Kwok CK, Ullmann R, Maierhofer A, Flunkert J, Haaf T, Edenhofer F, Lesch KP",
-        "mainpage" : true
+        "mainpage" : false
     },
     {
         "id" : 21,
         "link" : "https://www.ncbi.nlm.nih.gov/pubmed/29233642",
         "paperName" : "Behav Brain Res. 2018 Jul 2",
         "title" : "Acute inescapable stress alleviates fear extinction recall deficits caused by serotonin transporter abolishment.",
-        "author" : "Schipper P1, Henckens MJAG1, Lopresto D1, Kozicz T2, Homberg JR",
+        "author" : "Schipper P, Henckens MJAG, Lopresto D, Kozicz T, Homberg JR",
+        "mainpage" : false
+    },
+    {
+        "id" : 22,
+        "link" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6400880",
+        "paperName" : "Mol Neurobiol. 2019",
+        "title" : "Perturbed Developmental Serotonin Signaling Affects Prefrontal Catecholaminergic Innervation and Cortical Integrity",
+        "author" : "Lidiane P. Garcia, Josefine S. Witteveen, Anthonieke Middelman, Josephus A. van Hulten, Gerard J. M. Martens, Judith R. Homberg, Sharon M. Kolk",
+        "mainpage" : false
+    },
+    {
+        "id" : 23,
+        "link" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5960600",
+        "paperName" : "Biol Psychiatry. 2018 Jun 15",
+        "title" : "Median and dorsal raphe serotonergic neurons control moderate versus compulsive cocaine intake",
+        "author" : "Michel M.M. Verheij, Candice Contet, Peter Karel, Judith Latour, Rick H.A. van der Doelen, Bram Geenen, Josephus A. van Hulten, Francisca Meyer, Tamas Kozicz, Olivier George, George F. Koob, and Judith R. Homberg",
+        "mainpage" : true
+    },
+    {
+        "id" : 24,
+        "link" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6120487",
+        "paperName" : "CNS Neurosci Ther. 2018 Sep",
+        "title" : "Impaired fear extinction in serotonin transporter knockout rats is associated with increased 5‐hydroxymethylcytosine in the amygdala",
+        "author" : "Ling Shan, Hang‐Yuan Guo, Corina N. A. M. van den Heuvel, Joop van Heerikhuize, Judith R. Homberg",
+        "mainpage" : false
+    },
+    {
+        "id" : 25,
+        "link" : "https://www.frontiersin.org/articles/10.3389/fnmol.2018.00389/full",
+        "paperName" : "Front. Mol. Neurosci. 30 October 2018",
+        "title" : "TPH2 Deficiency Influences Neuroplastic Mechanisms and Alters the Response to an Acute Stress in a Sex Specific Manner",
+        "author" : "Paola Brivio, Giulia Sbrini, Polina Peeva, Mihail Todiras, Michael Bader, Natalia Alenina, Francesca Calabrese",
+        "mainpage" : false
+    },
+    {
+        "id" : 26,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/29753205",
+        "paperName" : "Curr Opin Neurobiol. 2018 Dec",
+        "title" : "Constraints on somatosensory map development: mutants lead the way.",
+        "author" : "Gaspar P., Renier N.",
+        "mainpage" : false
+    },
+    {
+        "id" : 27,
+        "link" : "https://www.frontiersin.org/articles/10.3389/fcell.2019.00065/full",
+        "paperName" : "Front. Cell Dev. Biol. 26 April 2019",
+        "title" : "Lack of Brain Serotonin Affects Feeding and Differentiation of Newborn Cells in the Adult Hypothalamus",
+        "author" : "Marike van Lingen, Maria Sidorova, Natalia Alenina, Friederike Klempin",
+        "mainpage" : false
+    },
+    {
+        "id" : 28,
+        "link" : "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6562656",
+        "paperName" : "Brain Sci. 2019 May",
+        "title" : "Impaired Fear Extinction Recall in Serotonin Transporter Knockout Rats Is Transiently Alleviated during Adolescence",
+        "author" : "Pieter Schipper, Paola Brivio, David de Leest, Leonie Madder, Beenish Asrar, Federica Rebuglio, Michel M. M. Verheij, Tamas Kozicz, Marco A. Riva, Francesca Calabrese, Marloes J. A. G. Henckens, Judith R. Homberg",
+        "mainpage" : false
+    },
+    {
+        "id" : 29,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/31452444",
+        "paperName" : "J Psychopharmacol. 2019 Aug 27",
+        "title" : "Serotonin type 5A receptor antagonists inhibit D-lysergic acid diethylamide discriminatory cue in rats.",
+        "author" : "Popik P, Krawczyk M, Kuziak A, Bugno R, Hogendorf A, Staroń J, Nikiforuk A",
+        "mainpage" : false
+    },
+    {
+        "id" : 30,
+        "link" : "https://www.ncbi.nlm.nih.gov/pubmed/30977636",
+        "paperName" : "ACS Chem Neurosci. 2019 Jul 17",
+        "title" : "Targeted Manipulation of Brain Serotonin: RNAi-Mediated Knockdown of Tryptophan Hydroxylase 2 in Rats.",
+        "author" : "Matthes S, Mosienko V, Popova E, Rivalan M, Bader M, Alenina N",
         "mainpage" : true
     }
 ];
@@ -192,9 +264,9 @@ publications = [
  * Note: numbers given here are publication id
  * @type {number[]}
  */
-var mdSmClearfix = [1, 3, 7, 9, 13, 19];
-var lgClearfix = [2, 8, 14, 20];
-var lgMdSmClearfix = [5, 11, 17];
+var mdSmClearfix = [1, 3, 7, 9, 13, 19, 21, 25];
+var lgClearfix = [2, 8, 14, 20, 26];
+var lgMdSmClearfix = [5, 11, 17, 23, 29];
 
 
 function colHeight() {
@@ -256,10 +328,8 @@ function initialize(){
 
     $(".moreLinks").click(function () {
 
-        $header = $(this);
-        $content = $(".hiddenLinks");
-        $glyph = $(".glyphicon");
-        $col = $(".col4");
+        let $content = $(".hiddenLinks"),
+            $col = $(".col4");
 
         if(window.innerWidth >= 992) {
             function heightAdapt() {
@@ -286,8 +356,8 @@ function initialize(){
     });
 
     for(var i = 0; i < publications.length; i++){
-        var author = publications[i].author;
-        var cut = author.indexOf(",");
+        var author = publications[i].author,
+            cut = author.indexOf(",");
         author = author.slice(0, cut) + ' et al.';
         if(publications[i].mainpage === true){
             articleSpace.append('<div class="article">' +
@@ -299,7 +369,7 @@ function initialize(){
                 '                       <p class="paperName">'+publications[i].paperName+'</p>' +
                 '                   </a>' +
                 '               </div>');
-        }        
+        }
     }
 }
 
@@ -345,17 +415,19 @@ function buildSite(index, counter){
         counter = index;
     }
     var appendix = $('#appendix');
+
     appendix.append('<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12 col-centered pub">' +
         '               <div class="publication">' +
-        '                   <a class="textColorTrans" href='+publications[index].link+'>' +
-        '                       <p class="paperName2">'+publications[index].paperName+'</p>' +
+        '                   <a target="_blank" class="textColorTrans" href=' + publications[index].link + '>' +
+        '                       <p class="paperName2">' + publications[index].paperName + '</p>' +
         '                       <hr class="publicationLine">' +
-        '                       <p class="publicationTitle">'+publications[index].title+'</p>' +
+        '                       <p class="publicationTitle">' + publications[index].title + '</p>' +
         '                       <hr class="publicationLine">' +
-        '                       <p class="publicationHead">'+publications[index].author+'</p>' +
+        '                       <p class="publicationHead">' + publications[index].author + '</p>' +
         '                   </a>' +
         '               </div>' +
         '           </div>');
+
     if($.inArray(counter, mdSmClearfix) !== -1){
         appendix.append('<div class="clearfix visible-md visible-sm"></div>')
     }else if($.inArray(counter, lgClearfix) !== -1){
