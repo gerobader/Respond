@@ -1,9 +1,5 @@
 window.addEventListener("resize", colHeight);
 
-$('#searchBox').on('input', function(){
-    searchPublications($(this).val().toLowerCase());
-});
-
 /**
  * All info for the publications are stored in this JSON Object
  * @type {*[]}
@@ -377,6 +373,10 @@ function initialize(){
  * This function calls the buildSite function for every object in the JSON object publications
  */
 function pubBuild(){
+    $('#searchBox').on('input', function(){
+        searchPublications($(this).val().toLowerCase());
+    });
+
     for(let i = 0; i < publications.length; i++){
         buildSite(i, -1);
     }
